@@ -1,0 +1,9 @@
+.popup-airport-select {
+  width: 369px;
+  max-height: 302px;
+  overflow-y: auto;
+}
+
+.popup--airport-option:last-child {
+  border-bottom: none;
+}

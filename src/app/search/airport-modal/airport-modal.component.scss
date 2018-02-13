@@ -1,0 +1,38 @@
+@import 'variables';
+
+.airport-selector {
+  height: 100%;
+}
+
+.airport-input {
+  position: relative;
+}
+
+.airport-input--icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  font-size: 24px;
+  line-height: 24px;
+  margin: 8px;
+  color: $color-blue-dark;
+}
+
+.airport-input--input {
+  width: 100%;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid $color-blue;
+  padding-left: 40px;
+  height: 40px;
+  font-size: $font-size-input;
+  font-weight: $font-weight-input;
+}
+
+.airport-options {
+  height: calc(100% - 40px);
+  max-height: 100%;
+  overflow-y: auto;
+}

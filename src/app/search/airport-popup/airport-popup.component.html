@@ -1,0 +1,16 @@
+<div class="popup-bordered popup-airport-select"
+     [ngClass]="{ hidden: !matchingAirports || matchingAirports.length == 0 }">
+
+  <div class="airport-option popup--airport-option"
+       *ngFor="let a of matchingAirports; trackBy trackByIata"
+       (mousedown)="onSelect.emit(a)"
+       [ngClass]="{ 'airport-option--selected': airport && airport.iata == a.iata }">
+    <div class="airport-option--name">
+      {{a.name}} ({{a.iata}})
+    </div>
+    <div class="airport-option--country">
+      {{a.country}}
+    </div>
+  </div>
+
+</div>

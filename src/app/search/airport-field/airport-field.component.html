@@ -1,0 +1,33 @@
+<input class="search-form--input"
+       placeholder="{{placeholder}}"
+       [ngModel]="searchString"
+       (ngModelChange)="onType($event)"
+       (blur)="onTypeFinish()"
+       (focus)="doOpen()"
+       (click)="doOpen()"
+       [ngClass]="{ 'search-form--input--active': open }">
+
+<popup [open]="open"
+       [ignoreMobile]="true"
+       (onClose)="open = false">
+  <airport-popup [isDepartureAirport]="isDepartureAirport"
+                 [airport]="airport"
+                 [airportText]="searchString"
+                 [airportOpposite]="airportOpposite"
+                 (onSelect)="onSelectAirport($event)">
+  </airport-popup>
+</popup>
+
+<div class="search-form--vertical-margin"></div>
+
+<mobile-modal [open]="open">
+  <airport-modal class="airport-selector"
+                 [isDepartureAirport]="isDepartureAirport"
+                 [placeholder]="placeholder"
+                 [airport]="airport"
+                 [airportOpposite]="airportOpposite"
+                 [open]="open"
+                 (onSelect)="onSelectAirport($event)"
+                 (onClose)="open = false">
+  </airport-modal>
+</mobile-modal>

@@ -1,0 +1,2 @@
+The airports, airlines and routes data are from [OpenFlights](https://openflights.org), which is made available here under the [Open Database License (ODbL)](https://opendatacommons.org/licenses/odbl/1.0/).
+In short, this means that you are welcome to use the data as you wish, if and only if you both acknowledge the source and license any derived works made available to the public with a free license as well.

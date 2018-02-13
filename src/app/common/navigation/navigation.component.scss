@@ -1,0 +1,41 @@
+@import 'variables';
+
+.navigation {
+  position: relative;
+  min-height: 50px;
+  background-color: $color-blue-dark;
+  border-bottom: 3px solid $color-gold;
+}
+
+.navigation-item {
+  padding: 0 20px;
+  font-size: 20px;
+  line-height: 50px;
+  font-weight: 700;
+  color: $color-light;
+
+  &:hover {
+    color: $color-gold;
+  }
+}
+
+.navigation-menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 13px;
+  font-size: 24px;
+  line-height: 24px;
+  color: $color-light;
+  cursor: pointer;
+
+  &:hover {
+    color: $color-gold;
+  }
+}
+
+@media screen and (min-width: $device-wide) {
+  .navigation-menu {
+    display: none;
+  }
+}

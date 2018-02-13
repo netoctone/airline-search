@@ -1,0 +1,21 @@
+<div class='airport-input'>
+  <i class="airport-input--icon mdi mdi-arrow-left" (click)="onClose.emit()"></i>
+  <input class='airport-input--input'
+         [focusOn]="open && device.isMobile()"
+         placeholder='{{placeholder}}'
+         [ngModel]='searchString'
+         (ngModelChange)='onSearchChange($event)'>
+</div>
+<div class="airport-options">
+  <div class="airport-option"
+       *ngFor="let curAirport of matchingAirports; trackBy: trackByIata"
+       (click)="onSelect.emit(curAirport)"
+       [ngClass]="{ 'airport-option--selected': airport && curAirport.iata == airport.iata }">
+    <div class="airport-option--name">
+      {{curAirport.name}} ({{curAirport.iata}})
+    </div>
+    <div class="airport-option--country">
+      {{curAirport.country}}
+    </div>
+  </div>
+</div>

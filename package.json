@@ -4,6 +4,7 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
+    "build:data": "node data/transform_airports.js; node data/transform_routes.js",
     "start": "webpack-dev-server --port=4200",
     "build": "webpack",
     "test": "karma start ./karma.conf.js",
@@ -24,7 +25,8 @@
     "@angular/router": "^5.2.0",
     "core-js": "^2.4.1",
     "rxjs": "^5.5.6",
-    "zone.js": "^0.8.19"
+    "zone.js": "^0.8.19",
+    "mdi": "^2.1.19"
   },
   "devDependencies": {
     "@angular/cli": "1.6.5",
@@ -68,6 +70,7 @@
     "url-loader": "^0.6.2",
     "circular-dependency-plugin": "^4.2.1",
     "copy-webpack-plugin": "^4.1.1",
-    "uglifyjs-webpack-plugin": "^1.1.5"
+    "uglifyjs-webpack-plugin": "^1.1.5",
+    "csv-parse": "^2.0.0"
   }
 }

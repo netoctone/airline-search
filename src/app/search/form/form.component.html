@@ -1,0 +1,21 @@
+<div class="search-form-wrapper">
+  <div class="search-form">
+    <div>
+      <search--airport-field class="search-form--input-wrapper"
+                             placeholder="Where from?"
+                             [airport]="airportDeparture"
+                             [airportOpposite]="airportArrival"
+                             [isDepartureAirport]="true"
+                             (onSelect)="onSelectDeparture($event)">
+      </search--airport-field>
+
+      <search--airport-field class="search-form--input-wrapper"
+                             placeholder="Where to?"
+                             [airport]="airportArrival"
+                             [airportOpposite]="airportDeparture"
+                             [isDepartureAirport]="false"
+                             (onSelect)="onSelectArrival($event)">
+      </search--airport-field>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+@import 'variables';
+
+.search-form-wrapper {
+  padding: 10px;
+  background-color: $color-blue;
+}
+
+.search-form {
+  &:after {
+    clear: both;
+    content: ' ';
+    display: table;
+  }
+}

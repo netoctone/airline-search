@@ -113,10 +113,10 @@ module.exports = {
   "resolve": {
     "extensions": [
       ".ts",
-      ".js"
+      ".js",
+      ".scss"
     ],
     "modules": [
-      "./node_modules",
       "./node_modules"
     ],
     "symlinks": true,
@@ -142,7 +142,7 @@ module.exports = {
       "./src/polyfills.ts"
     ],
     "styles": [
-      "./src/styles.css"
+      "./src/styles.scss"
     ]
   },
   "output": {
@@ -154,7 +154,7 @@ module.exports = {
   "module": {
     "rules": [
       {
-        "test": /\.html$/,
+        "test": /\.(html|csv)$/,
         "loader": "raw-loader"
       },
       {
@@ -175,7 +175,7 @@ module.exports = {
       },
       {
         "exclude": [
-          path.join(process.cwd(), "src/styles.css")
+          path.join(process.cwd(), "src/styles.scss")
         ],
         "test": /\.css$/,
         "use": [
@@ -199,7 +199,7 @@ module.exports = {
       },
       {
         "exclude": [
-          path.join(process.cwd(), "src/styles.css")
+          path.join(process.cwd(), "src/styles.scss")
         ],
         "test": /\.scss$|\.sass$/,
         "use": [
@@ -224,14 +224,14 @@ module.exports = {
             "options": {
               "sourceMap": false,
               "precision": 8,
-              "includePaths": []
+              "includePaths": [path.resolve(__dirname, '..', 'src/scss')]
             }
           }
         ]
       },
       {
         "exclude": [
-          path.join(process.cwd(), "src/styles.css")
+          path.join(process.cwd(), "src/styles.scss")
         ],
         "test": /\.less$/,
         "use": [
@@ -261,7 +261,7 @@ module.exports = {
       },
       {
         "exclude": [
-          path.join(process.cwd(), "src/styles.css")
+          path.join(process.cwd(), "src/styles.scss")
         ],
         "test": /\.styl$/,
         "use": [
@@ -292,7 +292,7 @@ module.exports = {
       },
       {
         "include": [
-          path.join(process.cwd(), "src/styles.css")
+          path.join(process.cwd(), "src/styles.scss")
         ],
         "test": /\.css$/,
         "use": [
@@ -316,7 +316,7 @@ module.exports = {
       },
       {
         "include": [
-          path.join(process.cwd(), "src/styles.css")
+          path.join(process.cwd(), "src/styles.scss")
         ],
         "test": /\.scss$|\.sass$/,
         "use": [
@@ -341,14 +341,14 @@ module.exports = {
             "options": {
               "sourceMap": false,
               "precision": 8,
-              "includePaths": []
+              "includePaths": [path.resolve(__dirname, '..', 'src/scss')]
             }
           }
         ]
       },
       {
         "include": [
-          path.join(process.cwd(), "src/styles.css")
+          path.join(process.cwd(), "src/styles.scss")
         ],
         "test": /\.less$/,
         "use": [
@@ -378,7 +378,7 @@ module.exports = {
       },
       {
         "include": [
-          path.join(process.cwd(), "src/styles.css")
+          path.join(process.cwd(), "src/styles.scss")
         ],
         "test": /\.styl$/,
         "use": [
